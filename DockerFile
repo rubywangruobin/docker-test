@@ -1,0 +1,15 @@
+FROM python:3.7
+MAINTAINER Ruby Wang "rubywang1029@gmail.com"
+
+ADD . /app
+
+# python dependencies
+WORKDIR /app
+
+#install req's
+RUN pip install -r requirements.txt
+
+
+EXPOSE 5000
+
+CMD ["python3", "app.py"]
